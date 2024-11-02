@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Dicas de Beleza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffccff; /* Fundo rosa claro */
+        }
+        header {
+            background-color: #ff66b2; /* Rosa escuro para o cabeçalho */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #ff66b2; /* Cor do cabeçalho */
+        }
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #ff66b2; /* Cor do rodapé */
+            color: white;
+            margin-top: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px;
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff3399;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Central de Dicas de Beleza</h1>
+        <nav>
+            <ul>
+                <li><a href="#skincare">Dicas de Pele</a></li>
+                <li><a href="#makeup">Dicas de Maquiagem</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#contact">Contate-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section id="skincare">
+            <h2>Dicas de Cuidados com a Pele</h2>
+            <p>1. Sempre limpe o rosto antes de dormir para remover maquiagem e impurezas.</p>
+            <p>2. Use um hidratante adequado para o seu tipo de pele.</p>
+            <p>3. Aplique protetor solar diariamente para proteger a pele dos raios UV.</p>
+            <p>4. Exfolie regularmente para remover células mortas e promover a renovação celular.</p>
+        </section>
+
+        <section id="makeup">
+            <h2>Dicas de Maquiagem</h2>
+            <p>1. Comece com um primer para uma base suave e maquiagem de longa duração.</p>
+            <p>2. Use uma base que combine com o seu tom de pele para um look natural.</p>
+            <p>3. Misture bem a sombra para um acabamento suave.</p>
+            <p>4. Não esqueça de finalizar a maquiagem com um spray fixador para durabilidade.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Galeria</h2>
+            <div class="gallery">
+                <img src="image1.jpg" alt="Rotina de Cuidados com a Pele">
+                <img src="image2.jpg" alt="Look de Maquiagem">
+                <img src="image3.jpg" alt="Produtos de Beleza">
+                <img src="image4.jpg" alt="Produtos para Cuidados com a Pele">
+                <img src="image5.jpg" alt="Aplicação de Maquiagem">
+                <img src="image6.jpg" alt="Dicas de Beleza">
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contate-nos</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Seu Nome" required>
+                <input type="email" id="email" placeholder="Seu Email" required>
+                <textarea id="message" placeholder="Sua Mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Central de Dicas de Beleza. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado pela sua mensagem, ' + document.getElementById('name').value + '!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
